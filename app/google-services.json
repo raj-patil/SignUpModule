@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "215600056634",
+    "firebase_url": "https://smartrationcard-a273f.firebaseio.com",
+    "project_id": "smartrationcard-a273f",
+    "storage_bucket": "smartrationcard-a273f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215600056634:android:ffdcf442be793880e66803",
+        "android_client_info": {
+          "package_name": "com.sih.sihsignupmodule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215600056634-fr96fg3bif3tna185va8405ukmb5vf5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sih.sihsignupmodule",
+            "certificate_hash": "02fc9732609335d3bd2a9e2ab1d6d541b758a259"
+          }
+        },
+        {
+          "client_id": "215600056634-cmtbdf89kte0ek5q0nusk7vnksvt5hrk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAznipWaGSh38oBdFKxDlPGrz1zEQcIRjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215600056634-cmtbdf89kte0ek5q0nusk7vnksvt5hrk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

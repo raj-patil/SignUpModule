@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SIhSignupModule</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="signup_name1_hint">First Name</string>
+    <string name="signup_name2_hint">Middle Name</string>
+    <string name="signup_name3_hint">Last Name</string>
+    <string name="login_mobile_hint">email</string>
+
+    <string name="signup_contact_hint">Contact No</string>
+    <string name="signup_rationcardnumber_hint">RationCard Number</string>
+    <string name="signup_adharcardnumber_hint">AdharCard Number</string>
+    <string name="signup_email_hint">Email</string>
+    <string name="signup_address_hint">Address</string>
+    <string name="signup_password_hint">Password</string>
+    <string name="signup_confirmpassword_hint">Confirm Password</string>
+
+
+
+
+</resources>
