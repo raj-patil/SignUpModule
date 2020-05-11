@@ -18,6 +18,24 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+
+//    FirebaseUser firebaseUser;
+//
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//
+//        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+//
+//        //check if user is null
+//        if (firebaseUser != null){
+//            Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
+//            startActivity(intent);
+//            finish();
+//        }
+//    }
+
+
     Button btnSIgnUpNext, btnSignUp, btnLogin;
     String firstName, middleName, lastName, rationCardNumber, adharCardNumber, panCardNumber, email, contact , password , confrimpassword;
     EditText editTextfirstName, editTextmiddleName, editTextlastName, editTextContact, editTextrationCardNumber, editTextadharCardNumber,editTextPassword,editTextConfirmPassword, editTextpanCardNumber, editTextemail;

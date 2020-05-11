@@ -17,8 +17,24 @@
     <string name="signup_address_hint">Address</string>
     <string name="signup_password_hint">Password</string>
     <string name="signup_confirmpassword_hint">Confirm Password</string>
+    <string name="navigation_drawer_open">OPEN</string>
+    <string name="navigation_drawer_close">CLOSE</string>
 
 
+    <string name="ratingtxt1">How Would you like to rate the Shop ?</string>
+    <string name="ratingtxt2">Service given by the shopkeeper ?</string>
+    <string name="ratingtxt3">The Product Quality ?</string>
+    <string name="ratingtxt4">The Simplicity in USing this App ?</string>
+    <string name="login_menu_item">Log in</string>
+    <string name="logout_menu_item">Log out</string>
+    <string name="welcome_on_signin">Congratulations! you have successfully signed in.</string>
+    <string name="default_nouser_signin">No user signed in currently.</string>
+    <string name="login_failed">Log in cancelled!</string>
+    <string name="login_success">Log in successful.</string>
+    <string name="logout_success">Successfully logged out</string>
+    <string name="logout_failed">Failed to log out</string>
+    <string name="login_unknown_Error">Unknown error while logging in. Please Try again</string>
+    <string name="no_connectivity">There is no internet connection. Please try again</string>
 
 
 </resources>

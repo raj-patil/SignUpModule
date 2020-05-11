@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".receiptActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/crdreceipt"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:src="@drawable/shopnameshap">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Receipt"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="9dp"></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ItemName"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:background="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_marginTop="85dp"
+            android:textAlignment="center"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coins"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:background="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="2"
+        android:layout_marginTop="85dp"
+        android:textAlignment="center"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quantity"
+        android:layout_weight="3"
+        android:layout_marginTop="85dp"
+        android:background="@color/colorAccent"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textAlignment="center"></TextView>
+</LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="115dp"
+
+            android:layout_marginBottom="100dp"
+            android:id="@+id/reciptrecycleview">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/totalamt"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+
+
+            android:layout_below="@+id/crdreceipt"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount : "
+                android:id="@+id/totalamount"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:textSize="14dp"
+                ></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 "
+                android:id="@+id/totalamountvalue"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="60dp"
+                android:textSize="20dp"
+                android:layout_marginTop="7dp"
+                ></TextView>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/carttotalamountshape" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="payment"
+        android:id="@+id/receiptPayment"
+        android:background="@drawable/proceedbtnshape"
+        ></Button>
+
+
+    </LinearLayout>
+</RelativeLayout>

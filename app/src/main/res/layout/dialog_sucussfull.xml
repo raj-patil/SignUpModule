@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/spacing_medium"
+    app:cardElevation="3.0dip"
+    app:cardUseCompatPadding="true"
+    xmlns:tools="http://schemas.android.com/tools">
+	<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="250.0dip" android:layout_height="wrap_content">
+		<LinearLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:gravity="center" android:orientation="vertical" android:padding="@dimen/spacing_large" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="@color/orange_500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_middle" android:text="Sucussfull ! !" />
+			<ImageView android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="@dimen/spacing_xxlarge" app:srcCompat="@drawable/ic_launcher_foreground" />
+			<TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="@color/grey_90" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_large" android:text="P A I D" />
+			<TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textColor="@color/grey_40" android:gravity="center" android:id="@+id/paymentdescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_middle" android:text="You Paid 400 coins to DistributerName" />
+		</LinearLayout>
+		<LinearLayout   android:textAlignment="center" android:background="@color/orange_500" android:layout_width="fill_parent" android:layout_height="@dimen/spacing_xxlarge" >
+
+			<Button android:id="@+id/dialogDone" android:background="@color/transparent" android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" android:textColor="@android:color/white" android:layout_gravity="center" android:layout_width="match_parent" android:textAlignment="center" android:layout_height="wrap_content" android:text="DONE" app:fontFamily="sans-serif-medium" />
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

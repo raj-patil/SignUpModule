@@ -1,56 +1,131 @@
 package com.sih.sihsignupmodule;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import java.util.HashMap;
+import com.google.android.material.navigation.NavigationView;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    TextView firstname,middlename,lastname,email,contact,ration,adhar,pan;
-    SessionManager session;
+        DrawerLayout drawerLayout;
+        NavigationView navigationView;
+        // Toolbar toolbar;
+        Menu menu;
+        TextView textView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+        CardView shop,wallet;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-        session = new SessionManager(getApplicationContext());
-
-        firstname=findViewById(R.id.firstname);
-        middlename=findViewById(R.id.middlename);
-        lastname=findViewById(R.id.lastname);
-        contact=findViewById(R.id.contacr);
-        email=findViewById(R.id.email);
-        ration=findViewById(R.id.rationcard);
-        adhar=findViewById(R.id.adharcard);
-        pan=findViewById(R.id.pancard);
-
-        HashMap<String, String> user = session.getUserDetails();
-        String strfname = user.get(SessionManager.USERFIRSTNAME);
-        String strmname = user.get(SessionManager.USERMIDDLENAME);
-        String strlname = user.get(SessionManager.USERLASTNAME);
-        String stremail = user.get(SessionManager.USEREMAIL);
-        String strcontact = user.get(SessionManager.USERCONTACT);
-        String strration = user.get(SessionManager.USERRATIONCARDNUMBER);
-        String  stradhar= user.get(SessionManager.USERADHARCARDNUMBER);
-        String strpan = user.get(SessionManager.USERPANCARDNUMBER);
-
-        Toast.makeText(DashboardActivity.this,strfname,Toast.LENGTH_SHORT).show();
-        Toast.makeText(DashboardActivity.this,strmname,Toast.LENGTH_SHORT).show();
-        Toast.makeText(DashboardActivity.this,strlname,Toast.LENGTH_SHORT).show();
-        Toast.makeText(DashboardActivity.this,strcontact,Toast.LENGTH_SHORT).show();
-        firstname.setText(strfname);
-        middlename.setText(strmname);
-        lastname.setText(strlname);
-        contact.setText(strcontact);
-        email.setText(stremail);
-        ration.setText(strration);
-        adhar.setText(stradhar);
-        pan.setText(strpan);
 
 
-    }
-}
+        drawerLayout=findViewById(R.id.drawer_layout);
+        navigationView=findViewById(R.id.nav_view);
+        //   toolbar=findViewById(R.id.toolbar);
+
+        //  setSupportActionBar(toolbar);
+
+        navigationView.bringToFront();
+
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle
+        (
+        this,
+        drawerLayout,
+        R.string.navigation_drawer_open,
+        R.string.navigation_drawer_close
+        )
+        {
+        };
+        drawerLayout.setDrawerListener(toggle);
+        toggle.syncState();
+
+
+
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+        menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_logout).setVisible(false);
+        menu.findItem(R.id.nav_profile).setVisible(false);
+
+        shop=findViewById(R.id.shop);
+        shop.setOnClickListener(new View.OnClickListener() {
+@Override
+public void onClick(View v) {
+        Intent intent=new Intent(DashboardActivity.this,ShopListActivity.class);
+        startActivity(intent);
+
+        }
+        });
+
+        wallet=findViewById(R.id.wallet);
+        wallet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                        Intent intent=new Intent(DashboardActivity.this,WalletActivity.class);
+                        startActivity(intent);
+
+                }
+        });
+
+        }
+
+@Override
+public void onBackPressed(){
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        drawerLayout.closeDrawer(GravityCompat.START);
+        }
+        else
+        {super.onBackPressed();
+        }
+        }
+
+
+public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+
+        case R.id.nav_home:
+        Toast.makeText(DashboardActivity.this, "Home Click", Toast.LENGTH_SHORT).show();
+
+        break; case R.id.profile:
+        Toast.makeText(DashboardActivity.this, "profile Click", Toast.LENGTH_SHORT).show();
+
+        break;
+        case R.id.nav_buy:
+        Toast.makeText(DashboardActivity.this, "BUY Click", Toast.LENGTH_SHORT).show();
+        break;
+        case R.id.nav_faq:
+        Toast.makeText(DashboardActivity.this, "FAQ Click", Toast.LENGTH_SHORT).show();
+        break;
+        case R.id.nav_login:
+        menu.findItem(R.id.nav_logout).setVisible(true);
+        menu.findItem(R.id.nav_profile).setVisible(true);
+        menu.findItem(R.id.nav_login).setVisible(false);
+        break;
+        case R.id.nav_logout: menu.findItem(R.id.nav_logout).setVisible(false);
+        menu.findItem(R.id.nav_profile).setVisible(false);
+        menu.findItem(R.id.nav_login).setVisible(true);
+        break;
+        case R.id.nav_share: Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show(); break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START); return true;
+        }
+
+
+        }

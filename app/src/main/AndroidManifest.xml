@@ -9,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".ActivitiyOtpVerification" />
         <activity android:name=".UserKycActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".RatingActivity" />
+        <activity android:name=".receiptActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".shopDetailActivity" />
+        <activity android:name=".ShopListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
